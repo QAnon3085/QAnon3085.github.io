@@ -3,10 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>太傻书籍存储</title>
 </head>
 <body>
-    <h1>哈哈哈哈</h1>
-<a href="./太傻天书">太傻天书</a>
+    <h1>书籍列表</h1>
+    <ul id="file-list"></ul>
+
+    <script>
+        const files = [
+            "《Theodore 之书》：地外生命体的远景.doc",
+            "必需品专卖店_13135126 (未知作者) (Z-Library).epub",
+            "当下的力量.epub",
+            "德国的服务自我大师.doc",
+            "登出键 (莫子) (Z-Library) .epub",
+            "短路 杨定一.epub",
+            "光之手_人体能量疗愈全书（简体中文版_简单校对）_by_yudywu_z_lib_org.mobi",
+            "宽恕就是爱 ((美国)保罗·费里尼) (Z-Library).epub",
+            "宽恕就是爱2-拥抱真我.epub",
+            "灵性冲撞 (杰德·麦肯纳) (Z-Library).docx",
+            "灵性开悟不是你想的那样_杰德麦肯纳_Z_Library.epub",
+            "蒙淘克计划-时间实验.epub",
+            "蒙淘克计划-意识金字塔.epub",
+            "你就是世界：克里希那穆提90篇經典對話錄_克里希那穆提_Z_Library.epub",
+            "你以為你的選擇真的是你的選擇？=_Freedom_Regained_The_Possibility_of_Free_Will_朱立安．巴吉尼.epub",
+            "Transylvanian_Series_Box_Set_Radu_Cinamar_Peter_Moon_Z_Library.epub",
+            "斯蒂芬·金的王牌惊悚套装（《肖申克的救赎》《闪灵》等共17本超值套装，美国惊悚小说永恒的王者，全球累计销量超过3.5亿册） (斯蒂芬·金 [斯蒂... (Z-Library).epub",
+            "这不是你的错：海灵格家庭创伤疗愈之道_=_It_Didnt_Start_with_You_How_Inherited_Family.epub",
+            "這不是你的錯：海靈格家庭創傷療癒之道_正體中文2024_10_09.epub",
+            "终极自由之路（1-36全集新）.doc",
+            "与神对话.全三卷（果麦经典）.epub",
+            "太傻十日谈_陶谦_黄果_陶谦_黄果_Z_Library_1.epub",
+            "奇迹课程.epub",
+            "如何看待阴谋论.doc",
+            "清醒地活：超越自我的生命之旅.epub",
+            "人类图去制约之旅：一个人的革命_玛丽．安．温妮格（Mary_Ann_Winiger）_Z_Library.epub",
+            "唐望三部曲（套装共3册）【畅销欧美五十年！出版以来被翻译成二十几种文字！在70年代的西方被誉为“新时代思潮的开山力作”！摇滚巨星约翰·列.epub",
+            "万物生而有翼.azw3",
+            "这一生为何而来：海灵格自传·访谈录_etc_Z_Library.epub",
+            "王凤仪大全集 (王凤仪 [王凤仪]) (Z-Library).epub"
+        ];
+
+        const fileList = document.getElementById('file-list');
+        files.forEach(file => {
+            const listItem = document.createElement('li');
+            const link = document.createElement('a');
+            link.href = file;
+            link.download = file;
+            link.textContent = file;
+            listItem.appendChild(link);
+            fileList.appendChild(listItem);
+        });
+    </script>
 </body>
 </html>
